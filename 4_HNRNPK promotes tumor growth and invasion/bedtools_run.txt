@@ -1,0 +1,34 @@
+-f:规定B文件的区间与A文件区间重合的区域占A区间的最小比例，只有重合区间大于这个比例，输出差集时才减去这个重叠区间.默认重叠区间的大小是1bp.
+-wa:输出A文件与B文件的重叠区域，并保留A文件原有的输入格式
+-wb:输出A文件与B文件的重叠区域，并保留B文件原有的输入格式
+1:就是peak完全匹配
+bedtools intersect -a 326.01v02.IDR.out.0102merged.bed.blacklist_removed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap326.01v02.txt
+bedtools intersect -a 326_01.basedon_326_01.peaks.l2inputnormnew.bed.compressed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap326_01.txt
+bedtools intersect -a 326_02.basedon_326_02.peaks.l2inputnormnew.bed.compressed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap326_02.txt
+
+
+bedtools intersect -a 206.01v02.IDR.out.0102merged.bed.blacklist_removed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap206.01v02.txt
+bedtools intersect -a 206_01.basedon_206_01.peaks.l2inputnormnew.bed.compressed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap206_01.txt
+bedtools intersect -a 206_02.basedon_206_02.peaks.l2inputnormnew.bed.compressed.bed.narrowPeak.encode.bed -b hg38_v35.bed -f 1 -wa -wb > overlap206_02.txt
+
+
+bedtools intersect -a K562_01_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_01_p.txt
+bedtools intersect -a K562_02_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_02_p.txt
+bedtools intersect -a K562_0102_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_0102_p.txt
+
+
+bedtools intersect -a hepg2_01_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_01_p.txt
+bedtools intersect -a hepg2_02_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_02_p.txt
+bedtools intersect -a hepg2_0102_p.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_0102_p.txt
+
+
+
+
+bedtools intersect -a K562_01_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_01_p0001.txt
+bedtools intersect -a K562_02_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_02_p0001.txt
+bedtools intersect -a K562_0102_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_K562_0102_p0001.txt
+
+
+bedtools intersect -a hepg2_01_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_01_p0001.txt
+bedtools intersect -a hepg2_02_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_02_p0001.txt
+bedtools intersect -a hepg2_0102_p0001.bed -b hg38_v35.bed -f 1 -wa -wb > overlap_hepg2_0102_p0001.txt

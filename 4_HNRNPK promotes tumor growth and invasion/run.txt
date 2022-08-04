@@ -1,0 +1,1 @@
+perl .\bin\circos -conf .\circos-tutorials-0.67\tutorials\zww\SCENIC\circos_immpathway.conf -outputdir .\circos-tutorials-0.67\\tutorials\zww\SCENIC\out\ -outputfile imm1.png
