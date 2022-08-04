@@ -1,0 +1,16 @@
+#!/bin/bash
+##############################################################
+# the name of job
+#PBS -N 4_cancer_regs_feature_plot.R
+# set the queue
+#PBS -q Biocc.Li
+
+# nodes: number of nodes requested by job
+# ppn  : the number of processors per node requested by job
+#PBS -l nodes=1:ppn=1
+
+#PBS -l walltime=1000:00:00
+##############################################################
+cd  $PBS_O_WORKDIR
+source activate /bioXJ/zhouww/0_tools_donotdel/scenic_zww
+R CMD BATCH /bioXJ/zhouww/SCENIC/scRNA/1_B_tsne/4_cancer_reg_featurePlot/code/4_cancer_regs_feature_plot.R

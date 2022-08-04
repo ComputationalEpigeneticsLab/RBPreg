@@ -1,0 +1,16 @@
+#!/bin/bash
+##############################################################
+# the name of job
+#PBS -N CRC tsne
+# set the queue
+#PBS -q Biocc.Li
+
+# nodes: number of nodes requested by job
+# ppn  : the number of processors per node requested by job
+#PBS -l nodes=1:ppn=1
+
+#PBS -l walltime=1000:00:00
+##############################################################
+cd  $PBS_O_WORKDIR
+source activate r36
+R CMD BATCH /bioXJ/zhouww/SCENIC/scRNA/1_B_tsne/CRC/code/crc_tsne.R
